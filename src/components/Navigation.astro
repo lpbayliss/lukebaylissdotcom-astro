@@ -3,19 +3,16 @@ export interface Props {}
 const {} = Astro.props as Props;
 ---
 
-<nav class="flex sticky top-0">
-	<div>Luke Bayliss</div>
-	<div>
-		<ul>
-			<li><a href="/experience">Experience</a></li>
-			<li><a href="/posts">posts</a></li>
-			<li><a href="/projects">Projects</a></li>
-		</ul>
-	</div>
-	<div>
-		<ul>
-			<li>Color Mode</li>
-			<li>RSS</li>
-		</ul>
-	</div>
+<nav class="flex w-full justify-between sticky max-w-6xl mx-auto h-14 lg:h-20 items-center px-6">
+			<ul class="flex space-x-6 items-center">
+				<li><a href="" class="mr-12 text-xl font-semibold text-[#fffffe]">Luke Bayliss</a></li>
+				<li><a href="/posts">Posts</a></li>
+				<li><a href="/experience">Experience</a></li>
+				<li><a href="/projects">Projects</a></li>
+			</ul>
+			<ul class="flex justify-self-end">
+				<li>Color Mode</li>
+				<li>RSS</li>
+				<li>Contact</li>
+			</ul>
 </nav>

@@ -1,12 +1,36 @@
 ---
+import PostPreview from "../components/PostPreview.astro";
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="min-w-min max-w-xl mx-auto">
-		<section>Hero</section>
-		<section>About</section>
-		<section>Recent posts</section>
-		<section>Get in contact</section>
+<Layout title="Luke Bayliss">
+	<main>
+		<section class="h-72 bg-surface dark:bg-surface-dark"></section>
+		<div class="flex flex-col lg:flex-row space-x-0 lg:space-x-16 space-y-16 lg:space-y-0 max-w-6xl mx-auto px-6 pt-16">
+			<Section title="Latest posts">
+				<PostPreview />
+				<PostPreview />
+				<PostPreview />
+				<PostPreview />
+				<PostPreview />
+				<PostPreview />
+				<PostPreview />
+			</Section>
+			<div class="space-y-16">
+				<Section title="About me">
+					<h2>Software engineer from Melbourne, Australia</h2>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius culpa
+						dolores nostrum voluptatum facilis itaque, id, illum numquam
+						consectetur praesentium iure laboriosam corporis repellat hic
+						assumenda voluptatibus quae maiores! Adipisci!
+					</p>
+				</Section>
+				<Section title="Get in contact">
+					<p>Send me an email or something, i dont know</p>
+				</Section>
+			</div>
+		</div>
 	</main>
 </Layout>
