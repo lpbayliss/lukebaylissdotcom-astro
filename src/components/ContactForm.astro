@@ -1,0 +1,33 @@
+<form class="flex flex-col space-y-4" name="contact" method="POST" data-netlify="true">
+  <div class="flex flex-col">
+    <label class="mb-1" for="name">Name:</label>
+    <input
+      class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out"
+      type="text"
+      name="name"
+      placeholder="Your name"
+      id="name"
+    />
+  </div>
+  <div class="flex flex-col">
+    <label class="mb-1" for="email">Email:</label>
+    <input
+      class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out"
+      type="email"
+      name="email"
+      placeholder="Your email"
+      id="email"
+    />
+  </div>
+  <div class="flex flex-col">
+    <label class="mb-1" for="message">Message</label>
+    <textarea
+      class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out resize-none"
+      name="message"
+      id="message"
+      placeholder="What do you call a fish with no eyes? A fsh."
+      cols="30"
+      rows="10"></textarea>
+  </div>
+  <button class="bg-primary rounded p-2 text-white font-semibold" type="submit">Send</button>
+</form>

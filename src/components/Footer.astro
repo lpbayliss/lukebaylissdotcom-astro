@@ -1,20 +1,47 @@
 ---
+import Copyright from "./Copyright.astro";
+
 export interface Props {}
 const {} = Astro.props as Props;
 ---
 
-<footer class="max-h-80 bg-primary text-headline px-6 py-12 mt-16 space-y-8">
-    <h1 class="text-xl font-semibold">Luke Bayliss</h1>
-    <div>
-        <h3 class="text-lg">Links</h3>
-        <ul class="underline underline-offset-2">
-            <li><a href="https://github.com/lpbayliss">GitHub</a></li>
-            <li>
-                <a href="https://www.linkedin.com/in/lpbayliss/">LinkedIn</a>
-            </li>
-            <li><a href="/terms-of-use">Terms of Use</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-        </ul>
+<footer class="max-h-80 mt-16 bg-surface">
+    <div
+        class="hidden md:flex justify-between max-w-6xl mx-auto px-6 py-12 text-headline"
+    >
+        <div class="flex flex-col justify-between">
+            <h1 class="text-xl font-semibold">Luke Bayliss</h1>
+            <Copyright />
+        </div>
+        <div class="mr-24">
+            <h3 class="text-lg">Links</h3>
+            <ul class="underline underline-offset-2">
+                <li><a href="https://github.com/lpbayliss">GitHub</a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/lpbayliss/">LinkedIn</a
+                    >
+                </li>
+                <li><a href="/terms-of-use">Terms of Use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
     </div>
-    <p>© 2022-present Luke Bayliss. All Rights Reserved.</p>
+    <div
+        class="flex flex-col md:hidden space-y-6 max-w-6xl mx-auto px-6 py-12 text-headline"
+    >
+        <h1 class="text-xl font-semibold">Luke Bayliss</h1>
+        <div class="mr-24">
+            <h3 class="text-lg">Links</h3>
+            <ul class="underline underline-offset-2">
+                <li><a href="https://github.com/lpbayliss">GitHub</a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/lpbayliss/">LinkedIn</a
+                    >
+                </li>
+                <li><a href="/terms-of-use">Terms of Use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <Copyright />
+    </div>
 </footer>

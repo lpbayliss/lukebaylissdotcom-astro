@@ -1,4 +1,5 @@
 ---
+import ContactForm from "../components/ContactForm.astro";
 import Hero from "../components/Hero.astro";
 import PostPreview from "../components/PostPreview.astro";
 import Section from "../components/Section.astro";
@@ -31,7 +32,8 @@ import Layout from "../layouts/Layout.astro";
 					</p>
 				</Section>
 				<Section title="Get in contact">
-					<p>Send me an email or something, i dont know</p>
+					<p class="italic mb-4">Got something to say? Feel free to send me a message!</p>
+					<ContactForm />
 				</Section>
 			</div>
 		</div>

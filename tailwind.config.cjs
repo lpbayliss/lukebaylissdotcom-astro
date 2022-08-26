@@ -8,7 +8,7 @@ module.exports = {
         headline: "#fffffe",
         paragraph: "#94a1b2",
         primary: "#7f5af0",
-        surface: "#72757e",
+        surface: "#242629",
       },
     },
   },
