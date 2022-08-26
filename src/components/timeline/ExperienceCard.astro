@@ -1,0 +1,18 @@
+---
+export interface Props {
+  company: string;
+  role: string;
+}
+const { company, role } = Astro.props as Props;
+---
+
+<div class="relative flex flex-col w-72 md:w-96 px-4 pt-2 pb-4 bg-surface rounded-md md:ml-6">
+  <h2 class="mb-1">Started at <span class="text-xl font-semibold text-headline">{company}</span></h2>
+  <p class="italic text-sm">As a {role}</p>
+  <div class="border-b border-paragraph w-full opacity-50 pt-1"/>
+  <slot />
+  <div
+    class="hidden md:block absolute border-solid border-l-[10px] border-l-transparent border-r-[10px] border-r-surface border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent w-0 h-0 -left-[20px] top-6"
+  >
+  </div>
+</div>

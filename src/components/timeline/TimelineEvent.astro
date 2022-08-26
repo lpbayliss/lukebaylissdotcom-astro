@@ -1,0 +1,21 @@
+---
+import EventDot from "./EventDot.astro";
+import ExperienceCard from "./ExperienceCard.astro";
+export interface Props {
+  company: string;
+  role: string;
+}
+const { company, role } = Astro.props as Props;
+---
+
+<div class="flex items">
+  <div class="hidden md:flex flex-col items-center w-20">
+    <div class="w-[3px] h-[25px] bg-surface"></div>
+    <EventDot />
+    <div class="w-[3px] flex-1 bg-surface"></div>
+  </div>
+
+  <ExperienceCard company={company} role={role}>
+    <slot />
+  </ExperienceCard>
+</div>

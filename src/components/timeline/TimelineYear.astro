@@ -1,0 +1,22 @@
+---
+import Line from "./Line.astro";
+import YearPill from "./YearPill.astro";
+
+export interface Props {
+  year: string;
+}
+const { year } = Astro.props as Props;
+---
+
+<div class="flex justify-center md:justify-start w-full">
+  <div class="hidden md:flex flex-col items-center w-20">
+    <Line />
+    <YearPill year={year} />
+    <Line />
+  </div>
+  <div class="flex md:hidden flex-col items-center w-20">
+    <Line />
+    <YearPill year={year} />
+    <Line />
+  </div>
+</div>

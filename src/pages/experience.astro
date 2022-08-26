@@ -1,9 +1,88 @@
 ---
+import ExperienceList from "../components/timeline/ExperienceList.astro";
+import TimelineEnd from "../components/timeline/TimelineEnd.astro";
+import TimelineEvent from "../components/timeline/TimelineEvent.astro";
+import TimelineGap from "../components/timeline/TimelineGap.astro";
+import TimelineStart from "../components/timeline/TimelineStart.astro";
+import TimelineWrapper from "../components/timeline/TimelineWrapper.astro";
+import TimelineYear from "../components/timeline/TimelineYear.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="My Experience">
-    <main class="max-w-xs mx-auto">
-        <h1 class="font-semibold">My Experience</h1>
+<Layout title="Luke Bayliss | Experience">
+    <main class="max-w-6xl mx-auto px-6 pt-16 flex justify-center items-center mb-16">
+        <TimelineWrapper>
+            <TimelineEnd />
+            <TimelineEvent company="Mr Yum" role="Software Engineer">
+                <ExperienceList
+                    points={[
+                        "Maintain an existing loyalty platform",
+                        "Design and develop integrations for a new loyalty platform",
+                        "Design event driven architecture and systems built on Temporal",
+                        "Facilitate and introduce team rituals and processes",
+                        "Actively contribute to a code quality guild",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineYear year="2022" />
+            <TimelineEvent company="Xero" role="Engineer">
+                <ExperienceList
+                    points={[
+                        "Facilitates existing, and introduced new team rituals",
+                        "Continuously promoting an agile philosophy among the team",
+                        "Developed and implemented ways of working documentation; specifically regarding how the engineering team can coordinate, develop, test, and deliver their work effectively",
+                        "Lead product initiatives where I have been at the core of discovery, design, and delivery",
+                        "Designed and built new, and developed existing front-end applications and back-end system",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineYear year="2021" />
+            <TimelineYear year="2020" />
+            <TimelineEvent company="AGL Energy" role="Application Developer">
+                <ExperienceList
+                    points={[
+                        "Built and piloted innovative product ideas; with a focus on integrating new technologies and exploring new business possibilities",
+                        "Frequently acted as a mentor for JavaScript based technologies due to my deep experience",
+                        "Developed orchestration systems involved in the Australian Government's ‘ARENA' program",
+                        "Designed & built services based on the event sourcing pattern to super power the identity platform",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineGap />
+            <TimelineEvent company="AGL Energy" role="Digital Developer">
+                <ExperienceList
+                    points={[
+                        "Promoted and facilitated an agile practice; often leading discussions and orchestrating team SCRUM events",
+                        "Took lead on a variety of initiatives through discovery, design, and implementation phases",
+                        "Introduced and facilitated a DevOps philosophy within the engineering team",
+                        "Supported a business wide Identity Platform, often collaborating with stake holders from across the business",
+                        "Re-engineered a number of out of date systems within the Identity platform",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineYear year="2019" />
+            <TimelineEvent company="YOUniverse" role="Full-Stack Developer">
+                <ExperienceList
+                    points={[
+                        "Actively participated in product discussions, feature discovery, requirement gathering and story mapping as part of a LEAN agile workplace",
+                        "Acted as the lead developer for front-end technologies. Implementing and supporting a variety of front-end frameworks and related tooling",
+                        "Developed an extensible design system for our React front-end",
+                        "Re-engineered a monolith into a system of micro-services with a strong focus on domain driven design",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineYear year="2018" />
+            <TimelineEvent company="Unico" role="Application Developer">
+                <ExperienceList
+                    points={[
+                        "Worked on a variety of telecommunication systems using Java",
+                        "Developed on a number of AngularJS and React applications for different clients",
+                        "Maintained an extensive automated testing suite using Robot Framework and Python",
+                    ]}
+                />
+            </TimelineEvent>
+            <TimelineYear year="2017" />
+            <TimelineStart />
+        </TimelineWrapper>
     </main>
 </Layout>

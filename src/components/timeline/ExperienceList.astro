@@ -1,0 +1,11 @@
+---
+export interface Props {
+  points: string[];
+}
+const { points } = Astro.props as Props;
+
+---
+
+<ul class="text-sm pl-6 list-disc pt-2 space-y-2">
+  {points.map((point) => <li>{point}</li>)}
+</ul>

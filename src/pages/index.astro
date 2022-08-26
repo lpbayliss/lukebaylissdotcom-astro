@@ -7,31 +7,33 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luke Bayliss">
-	<main>
-		<Hero />
-		<div
-			class="flex flex-col lg:flex-row space-x-0 lg:space-x-16 space-y-16 lg:space-y-0 max-w-6xl mx-auto px-6 pt-16"
-		>
-			<Section title="Latest posts">
-				<PostPreview />
-				<PostPreview />
-				<PostPreview />
-				<PostPreview />
-				<PostPreview />
-				<PostPreview />
-				<PostPreview />
+	<main
+		class="flex flex-col lg:flex-row space-x-0 lg:space-x-16 space-y-16 lg:space-y-0 max-w-6xl mx-auto px-6 pt-16 mb-16"
+	>
+		<Section title="Latest posts">
+			<PostPreview />
+			<PostPreview />
+			<PostPreview />
+			<PostPreview />
+			<PostPreview />
+			<PostPreview />
+			<PostPreview />
+		</Section>
+		<div class="space-y-16 min-w-[40%]">
+			<Section title="About me">
+				<p>
+					I am a software engineer from Melbourne, Australia. I'm currently
+					working for the Australian based start up <a
+						href="https://www.mryum.com/company">Mr Yum</a
+					>.
+				</p>
 			</Section>
-			<div class="space-y-16 min-w-[40%]">
-				<Section title="About me">
-					<p>
-						I am a software engineer from Melbourne, Australia. I'm currently working for the Australian based start up <a href="https://www.mryum.com/company">Mr Yum</a>.
-					</p>
-				</Section>
-				<Section title="Get in contact">
-					<p class="italic mb-4">Got something to say? Feel free to send me a message!</p>
-					<ContactForm />
-				</Section>
-			</div>
+			<Section title="Get in contact">
+				<p class="italic mb-2">
+					Got something to say? Feel free to send me a message!
+				</p>
+				<ContactForm />
+			</Section>
 		</div>
 	</main>
 </Layout>

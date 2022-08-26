@@ -1,0 +1,9 @@
+---
+export interface Props {
+  year: string;
+}
+const { year } = Astro.props as Props;
+---
+<div class="rounded-xl px-3 py-0.5 bg-primary text-headline font-thin text-sm">
+  {year}
+</div>

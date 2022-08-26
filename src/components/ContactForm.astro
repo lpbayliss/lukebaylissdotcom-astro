@@ -1,7 +1,14 @@
-<form class="flex flex-col space-y-4" name="contact" method="POST" data-netlify="true">
+<form
+  class="flex flex-col space-y-4"
+  name="contact"
+  action="/success"
+  method="POST"
+  data-netlify="true"
+>
   <div class="flex flex-col">
     <label class="mb-1" for="name">Name:</label>
     <input
+      required
       class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out"
       type="text"
       name="name"
@@ -12,6 +19,7 @@
   <div class="flex flex-col">
     <label class="mb-1" for="email">Email:</label>
     <input
+      required
       class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out"
       type="email"
       name="email"
@@ -22,6 +30,7 @@
   <div class="flex flex-col">
     <label class="mb-1" for="message">Message</label>
     <textarea
+      required
       class="text-headline placeholder-paragraph p-2 rounded bg-surface border-surface focus:border-primary border outline-none transition ease-in-out resize-none"
       name="message"
       id="message"
@@ -29,5 +38,7 @@
       cols="30"
       rows="10"></textarea>
   </div>
-  <button class="bg-primary rounded p-2 text-white font-semibold" type="submit">Send</button>
+  <button class="bg-primary rounded p-2 text-white font-semibold" type="submit"
+    >Send</button
+  >
 </form>
