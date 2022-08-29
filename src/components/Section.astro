@@ -1,9 +1,15 @@
 ---
-export interface Props { title: string }
+export interface Props {
+  title: string;
+}
 const { title } = Astro.props as Props;
 ---
 
 <section>
-  <h1 class="capitalize text-xl font-semibold mb-10 text-primary">{title}</h1>
-  <slot/>
+  <h1
+    class="capitalize text-xl font-semibold mb-10 text-primary border-b border-primary max-w-sm"
+  >
+    {title}
+  </h1>
+  <slot />
 </section>

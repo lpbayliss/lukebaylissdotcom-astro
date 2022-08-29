@@ -1,9 +1,34 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Luke Bayliss | Projects">
     <main class="max-w-6xl mx-auto px-6 pt-16 mb-16">
-        <h1 class="font-semibold">My Projects</h1>
+        <h1
+            class="capitalize text-xl font-semibold mb-10 text-primary border-b border-primary max-w-sm"
+        >
+            My Projects
+        </h1>
+        <div class="flex gap-5 flex-wrap justify-center">
+            <ProjectCard
+                name="Retrobox"
+                description="A small web app for collecting suggestions to be reviewed at your next retrospective."
+                imgSrc="/retrobox.png"
+                href="https://retrobox.app/"
+            />
+            <ProjectCard
+                name="Robot Fraser"
+                description="An automated sign off for your daily stand up. He sleeps on weekends."
+                imgSrc="/robot-fraser.png"
+                href="https://robotfraser.com/"
+            />
+            <ProjectCard
+                name="Should I Work From The Office?"
+                description="A humorous excuse generator for when you don't want to come into the office"
+                imgSrc="/work-from-office.png"
+                href="https://www.shouldiworkfromtheoffice.com/"
+            />
+        </div>
     </main>
 </Layout>

@@ -1,0 +1,21 @@
+---
+export interface Props {
+    href: string;
+    name: string;
+    description: string;
+    imgSrc: string;
+}
+const { href, name, description, imgSrc } = Astro.props as Props;
+---
+
+<a href={href} target="_blank">
+    <div
+        class="w-[320px] h-[380px] overflow-hidden rounded-md bg-surface hover:border-primary border border-canvas transition ease-in-out"
+    >
+        <img src={imgSrc} alt={name} />
+        <div class="flex flex-col p-5">
+            <h2 class="text-lg font-semibold text-headline mb-2">{name}</h2>
+            <p>{description}</p>
+        </div>
+    </div>
+</a>

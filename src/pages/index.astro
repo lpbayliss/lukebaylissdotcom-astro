@@ -1,39 +1,54 @@
 ---
 import ContactForm from "../components/ContactForm.astro";
-import Hero from "../components/Hero.astro";
 import PostPreview from "../components/PostPreview.astro";
 import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
+
+const posts = await Astro.glob("./**/*.md");
 ---
 
 <Layout title="Luke Bayliss">
-	<main
-		class="flex flex-col lg:flex-row space-x-0 lg:space-x-16 space-y-16 lg:space-y-0 max-w-6xl mx-auto px-6 pt-16 mb-16"
-	>
-		<Section title="Latest posts">
-			<PostPreview />
-			<PostPreview />
-			<PostPreview />
-			<PostPreview />
-			<PostPreview />
-			<PostPreview />
-			<PostPreview />
-		</Section>
-		<div class="space-y-16 min-w-[40%]">
-			<Section title="About me">
-				<p>
-					I am a software engineer from Melbourne, Australia. I'm currently
-					working for the Australian based start up <a
-						href="https://www.mryum.com/company">Mr Yum</a
-					>.
-				</p>
-			</Section>
-			<Section title="Get in contact">
-				<p class="italic mb-2">
-					Got something to say? Feel free to send me a message!
-				</p>
-				<ContactForm />
-			</Section>
-		</div>
-	</main>
+  <main
+    class="flex flex-col lg:flex-row space-x-0 lg:space-x-16 space-y-16 lg:space-y-0 max-w-6xl mx-auto px-6 pt-16 mb-16"
+  >
+    <div>
+      <Section title="Latest posts">
+        {
+          posts.map((post: any) => (
+            <PostPreview
+              title={post.frontmatter.title}
+              preview={post.frontmatter.preview}
+              href={post.url}
+            />
+          ))
+        }
+      </Section>
+    </div>
+    <div class="space-y-16 lg:max-w-[40%]">
+      <Section title="About me">
+        <div class="space-y-4">
+          <p>
+            I am a software engineer from Melbourne, Australia where I currently
+            working for the Australian based start up <a
+              href="https://www.mryum.com/company">Mr Yum</a
+            >.
+          </p>
+          <p>
+            I have a passion for product and bringing innovative ideas to life
+            through code.
+          </p>
+          <p>
+            Outside of work I enjoy coffee and cooking. I'f I'm not glued to a
+            monitor you'll usually find me whipping up a storm in the kitchen.
+          </p>
+        </div>
+      </Section>
+      <Section title="Get in contact">
+        <p class="italic mb-2">
+          Got something to say? Feel free to send me a message!
+        </p>
+        <ContactForm />
+      </Section>
+    </div>
+  </main>
 </Layout>
