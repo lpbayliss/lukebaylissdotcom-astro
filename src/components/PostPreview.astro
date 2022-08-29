@@ -8,14 +8,15 @@ export interface Props {
 const { title, preview, href } = Astro.props as Props;
 ---
 
-<div class="mb-10 last:mb-0">
-  <h2 class="text-lg mb-4 text-[#fffffe]">{title}</h2>
-  <p class="mb-4">
-    {preview}
-  </p>
-  <a
-    href={href}
-    class="hover:underline underline-offset-4 font-semibold text-headline hover:text-primary transition ease-in-out"
-    >Read more
+<div class="mb-4 last:mb-0 group hover:bg-surface p-4 rounded transition ease-in-out">
+  <a href={href}>
+    <h2 class="text-lg mb-4 text-[#fffffe]">{title}</h2>
+    <p class="mb-4">
+      {preview}
+    </p>
+    <span
+      class="group-hover:underline underline-offset-4 font-semibold text-headline group-hover:text-primary transition ease-in-out"
+      >Read more
+    </span>
   </a>
 </div>
