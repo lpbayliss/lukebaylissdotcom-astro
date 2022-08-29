@@ -1,0 +1,23 @@
+---
+import PostPreview from "../../components/PostPreview.astro";
+import Section from "../../components/Section.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = await Astro.glob("./**/*.md");
+---
+
+<Layout title="Luke Bayliss | Posts">
+  <main class="max-w-6xl mx-auto px-6 pt-16 mb-16">
+    <Section title="All posts">
+      {
+        posts.map((post: any) => (
+          <PostPreview
+            title={post.frontmatter.title}
+            preview={post.frontmatter.preview}
+            href={post.url}
+          />
+        ))
+      }
+    </Section>
+  </main>
+</Layout>

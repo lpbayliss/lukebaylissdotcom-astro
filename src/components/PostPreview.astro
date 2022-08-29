@@ -1,12 +1,21 @@
+---
+export interface Props {
+  title: string;
+  preview: string;
+  href: string;
+}
+
+const { title, preview, href } = Astro.props as Props;
+---
+
 <div class="mb-10 last:mb-0">
-  <h2 class="text-lg mb-4 text-[#fffffe]">Lorem ipsum dolor!</h2>
+  <h2 class="text-lg mb-4 text-[#fffffe]">{title}</h2>
   <p class="mb-4">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat voluptatem
-    eaque, quidem assumenda facere laudantium excepturi eligendi, cupiditate
-    vero odit quae tempore et minus sequi harum ipsam laborum ex quibusdam
-    dolorem sed illo fugiat aperiam culpa necessitatibus! Illo excepturi,
-    numquam qui odio assumenda, nostrum quis doloremque placeat, saepe soluta
-    quod.
+    {preview}
   </p>
-  <a href="/soemthing" class="hover:underline underline-offset-4 font-semibold text-headline hover:text-primary">Read more</a>
+  <a
+    href={href}
+    class="hover:underline underline-offset-4 font-semibold text-headline hover:text-primary transition ease-in-out"
+    >Read more
+  </a>
 </div>

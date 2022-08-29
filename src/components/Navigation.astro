@@ -4,45 +4,46 @@ const {} = Astro.props as Props;
 ---
 
 <nav
-	class="flex w-full justify-start max-w-6xl mx-auto h-14 lg:h-20 items-center px-6 py-8"
+  class="flex w-full justify-start max-w-6xl mx-auto h-14 lg:h-20 items-center px-6 py-8"
 >
-	<a href="/" class="mr-12 text-xl font-semibold text-headline">Luke Bayliss</a>
-	<ul class="hidden sm:flex space-x-6 items-center">
-		<li><a href="/posts">Posts</a></li>
-		<li><a href="/experience">Experience</a></li>
-		<li><a href="/projects">Projects</a></li>
-	</ul>
-	<ul
-		class="ml-auto items-center space-x-4 text-xl text-primary hidden sm:flex"
-	>
-		<li>
-			<button
-				><i class="fa-duotone fa-sun hover:text-headline transition ease-in-out"
-				></i>
-			</button>
-		</li>
-		<li>
-			<button
-				><i
-					class="fa-duotone fa-moon hover:text-headline transition ease-in-out"
-				></i>
-			</button>
-		</li>
-		<li>
-			<button
-				><i class="fa-duotone fa-rss hover:text-headline transition ease-in-out"
-				></i>
-			</button>
-		</li>
-	</ul>
-	<ul
-		class="ml-auto items-center space-x-4 text-xl text-primary flex sm:hidden"
-	>
-		<li>
-			<button
-				><i class="fa-duotone fa-bars hover:text-headline transition ease-in-out"
-				></i>
-			</button>
-		</li>
-	</ul>
+  <a href="/" class="mr-12 text-xl font-semibold text-headline">Luke Bayliss</a>
+  <ul class="hidden sm:flex space-x-6 items-center">
+    <li><a href="/posts">Posts</a></li>
+    <li><a href="/experience">Experience</a></li>
+    <li><a href="/projects">Projects</a></li>
+  </ul>
+  <ul
+    class="ml-auto items-center space-x-4 text-xl text-primary hidden sm:flex"
+  >
+    <!-- <li>
+      <button
+        ><i class="fa-duotone fa-sun hover:text-headline transition ease-in-out"
+        ></i>
+      </button>
+    </li>
+    <li>
+      <button
+        ><i
+          class="fa-duotone fa-moon hover:text-headline transition ease-in-out"
+        ></i>
+      </button>
+    </li> -->
+    <li>
+      <a href="/rss.xml"
+        ><i class="fa-duotone fa-rss hover:text-headline transition ease-in-out"
+        ></i>
+      </a>
+    </li>
+  </ul>
+  <ul
+    class="ml-auto items-center space-x-4 text-xl text-primary flex sm:hidden"
+  >
+    <li>
+      <button
+        ><i
+          class="fa-duotone fa-bars hover:text-headline transition ease-in-out"
+        ></i>
+      </button>
+    </li>
+  </ul>
 </nav>
