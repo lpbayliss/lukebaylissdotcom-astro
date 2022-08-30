@@ -1,7 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
-import Navigation from "../components/Navigation.astro";
+import Navigation from "../components/Navigation";
 
 export interface Props {
   title: string;
@@ -34,7 +34,7 @@ const { title } = Astro.props as Props;
     ></script>
   </head>
   <body class="h-screen">
-    <Navigation />
+    <Navigation client:load />
     <Hero />
     <slot />
     <Footer />
